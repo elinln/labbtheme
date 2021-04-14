@@ -52,7 +52,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="hero">
-								<img src="img/city.jpg" />
+                                <img src="./img/city.jpg" alt="">
 								<div class="text">
 									<h1>Hej och välkommen!</h1>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex.</p>
@@ -66,7 +66,8 @@
 
 
 
-	<script src="js/script.js"></script>
+    <script src="<?= get_template_directory_uri().'/js/script.js' ?>"></script>
+
     <?php 
         get_footer();
     ?>
