@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Labb 1</title>
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script src="js/jquery.js"></script>
+	<title>Labb 1 Elin</title>
+	<link href="<?= get_template_directory_uri().'/css/font-awesome.css' ?>" rel="stylesheet" type="text/css" />
+	<link href="<?= get_template_directory_uri().'/css/bootstrap.css' ?>" rel="stylesheet" type="text/css" />
+	<link href="<?= get_template_directory_uri().'/css/style.css' ?>" rel="stylesheet" type="text/css" />
+	<script src="<?= get_template_directory_uri().'/js/jquery.js' ?>"></script>
     <?php 
         wp_head();
     ?>
