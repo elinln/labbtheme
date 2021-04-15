@@ -2,7 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Labb 1 Elin</title>
+	<title><?php 
+    wp_title();
+    ?></title>
 	<link href="<?= get_template_directory_uri().'/css/font-awesome.css' ?>" rel="stylesheet" type="text/css" />
 	<link href="<?= get_template_directory_uri().'/css/bootstrap.css' ?>" rel="stylesheet" type="text/css" />
 	<link href="<?= get_template_directory_uri().'/css/style.css' ?>" rel="stylesheet" type="text/css" />
@@ -16,26 +18,36 @@
 	<div id="wrap">
 
 		<header id="header">
-			<div class="container">
+			 <div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+                        <?php 
+                            dynamic_sidebar('headline'); // Widget för klickbar logga i headern */
+                        ?>
 					</div>
 					<div class="col-sm-6 hidden-xs">
-						<form id="searchform" class="searchform">
-							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
-							</div>
-						</form>
+                        <?php 
+                            dynamic_sidebar('searching'); // Widget för sökfält i headern */
+                        ?>
+							
 					</div>
-					<div class="col-xs-4 text-right visible-xs">
-						<div class="mobile-menu-wrap">
-							<i class="fa fa-search"></i>
-							<i class="fa fa-bars menu-icon"></i>
-						</div>
+				</div>
+			</div> 
+		</header>
+
+        <nav id="nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<ul class="menu">
+							<li class="current-menu-item">
+                            <?php 
+                                wp_nav_menu();
+                            ?>
+                            </li>
+	
+						</ul>
 					</div>
 				</div>
 			</div>
-		</header>
+		</nav> 
