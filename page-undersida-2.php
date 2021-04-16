@@ -13,9 +13,11 @@ get_header();
 				<div class="row">
 					<aside id="secondary" class="col-xs-12 col-md-3">
 						<ul class="side-menu">
+							<li>
 							<?php
 							dynamic_sidebar('sidebar'); // Widget för sidebar 
 							?>
+							</li>
 						</ul>
 					</aside>
 					<div id="primary" class="col-xs-12 col-md-9">

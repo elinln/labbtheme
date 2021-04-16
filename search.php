@@ -10,13 +10,13 @@ get_header();
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-8 col-md-offset-2">
 							<h1>Sökresultat för: <?php 
-							        the_search_query(); // Visar vad man sökt på 
+							        the_search_query(); // Titel + visar vad man sökt på 
                                     ?></h1>
 							<div class="searchform-wrap">
 								<form id="searchform" class="searchform">
 									<div>
                                     <?php 
-							        dynamic_sidebar('searching'); 
+							        dynamic_sidebar('searching'); // Widget för sökfält
                                     ?>
 									</div>
 								</form>
@@ -25,7 +25,7 @@ get_header();
 				while(have_posts()) {
 				the_post(); 
 			?>
-        
+                <!-- Här nedanför är resultatet för sökningen -->
 				<article>
 					<img src="<?php the_post_thumbnail_url()?>"/>
 					<h2 class="title">

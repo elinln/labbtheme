@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-
 <main>
 	<?php
 	while (have_posts()) {
@@ -17,15 +16,16 @@ get_header();
 								?></h1>
 						<p> <?php
 							the_content();
-							the_post_thumbnail_url();
 							?></p>
 
 					</div>
 					<aside id="secondary" class="col-xs-12 col-md-3">
 						<ul class="side-menu">
+							<li>
 							<?php
 							dynamic_sidebar('sidebar'); // Widget för sidebar 
 							?>
+							</li>
 						</ul>
 					</aside>
 				</div>

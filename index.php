@@ -1,5 +1,5 @@
 <?php
-get_header();
+get_header(); /* Hämta Header */
 ?>
 
 <body>
@@ -14,17 +14,17 @@ get_header();
                         <div class="col-xs-12">
                             <div class="hero">
 
-                                <img src="<?php the_post_thumbnail_url(); ?>">
+                                <img src="<?php the_post_thumbnail_url(); ?>"> <!--Hämta bild-->
 
                                 <div class="text">
                                     <h1>
                                         <?php
-                                        the_title();
+                                        the_title(); // Hämta titel
                                         ?>
                                     </h1>
                                     <p>
                                         <?php
-                                        the_content();
+                                        the_content(); // Hämtar content
                                         ?>
                                     </p>
                                 </div>
@@ -39,10 +39,10 @@ get_header();
     </main>
 
 
-    <script src="<?= get_template_directory_uri() . '/js/script.js' ?>"></script>
+    <script src="<?= get_template_directory_uri() . '/js/script.js' ?>"></script> <!--Hämta JS-fil-->
 
     <?php
-    get_footer();
+    get_footer(); /* Hämta Footer */
     ?>
 </body>
 

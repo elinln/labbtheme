@@ -71,6 +71,3 @@
         'id' => 'blogbar',
         'before_widget' => false,
     ]);
-
-
-?>
