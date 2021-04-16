@@ -1,19 +1,33 @@
 <?php 
 get_header(); 
 ?>
+
 <main>
 <div class="container">
 	<div class="row">
 		<div id="primary" class="col-xs-12 col-md-9">
-			<h1>
-                <?php the_archive_title();?>
-            </h1>
+            <div class="container">
+					<div class="row">
+						<div id="primary" class="col-xs-12 col-md-8 col-md-offset-2">
+							<h1>Sökresultat för: <?php 
+							        the_search_query(); // Visar vad man sökt på 
+                                    ?></h1>
+							<div class="searchform-wrap">
+								<form id="searchform" class="searchform">
+									<div>
+                                    <?php 
+							        dynamic_sidebar('searching'); 
+                                    ?>
+									</div>
+								</form>
+							</div>
 			<?php 
 				while(have_posts()) {
 				the_post(); 
 			?>
+        
 				<article>
-					<img src="<?php get_the_post_thumbnail_url()?>"/>
+					<img src="<?php the_post_thumbnail_url()?>"/>
 					<h2 class="title">
 						<a href="<?php the_permalink();?>"><?php the_title();?></a>
 					</h2>
@@ -39,15 +53,6 @@ get_header();
 			}				
 			?>
 		</div>
-									
-		<aside id="secondary" class="col-xs-12 col-md-3">
-			<div id="sidebar">
-				<ul>
-					<?php dynamic_sidebar("blogbar");
-                    ?>
-				</ul>
-			</div>
-		</aside>
 	</div>
 </div>
 </main>

@@ -21,9 +21,7 @@
 			 <div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-                        <?php 
-                            dynamic_sidebar('headline'); // Widget för klickbar logga i headern */
-                        ?>
+                        <a class="logo" href="<?=get_bloginfo("url");?>"> <?=get_bloginfo("name");?></a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
                         <?php 
@@ -42,7 +40,7 @@
 						<ul class="menu">
 							<li class="current-menu-item">
                             <?php 
-                                wp_nav_menu();
+                                wp_nav_menu(); 
                             ?>
                             </li>
 	

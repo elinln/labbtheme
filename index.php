@@ -1,54 +1,49 @@
-<?php 
-    get_header();
+<?php
+get_header();
 ?>
 
 <body>
-    
-		 <div class="mobile-search">
-			
-		</div> 
+    <main>
+        <?php
+        while (have_posts()) {
+            the_post();
+        ?>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="hero">
 
-        <main>
-            <?php 
-            while( have_posts() ) {
-                the_post();
-            
-            ?>
-			<section>
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="hero">
+                                <img src="<?php the_post_thumbnail_url(); ?>">
 
-                            <img src="<?php the_post_thumbnail_url(); ?>">	
-
-                            <div class="text">
-									<h1>
-                                        <?php 
-                                         the_title();
+                                <div class="text">
+                                    <h1>
+                                        <?php
+                                        the_title();
                                         ?>
                                     </h1>
-									<p>
-                                        <?php 
-                                            the_content(); 
+                                    <p>
+                                        <?php
+                                        the_content();
                                         ?>
                                     </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-            <?php
-            }
-            ?>
-		</main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php
+        }
+        ?>
+    </main>
 
 
-    <script src="<?= get_template_directory_uri().'/js/script.js' ?>"></script>
+    <script src="<?= get_template_directory_uri() . '/js/script.js' ?>"></script>
 
-    <?php 
-        get_footer();
+    <?php
+    get_footer();
     ?>
 </body>
+
 </html>
